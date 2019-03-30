@@ -4,7 +4,7 @@ return [
     'production' => true,
     'baseUrl' => 'https://brasiltranscrito.huehue.eu',
 
-    // 'googleAnalyticsId' => '',
+    'googleAnalyticsId' => 'UA-137357513-1',
     // 'googleTagManagerId' => '',
 ];
 
