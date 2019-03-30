@@ -2,8 +2,9 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://beta.podentender.com',
+    'baseUrl' => 'https://brasiltranscrito.huehue.eu',
 
-    // 'googleAnalyticsId' => 'UA-126110575-1',
-    // 'googleTagManagerId' => 'GTM-W7MXP75',
+    // 'googleAnalyticsId' => '',
+    // 'googleTagManagerId' => '',
 ];
+
