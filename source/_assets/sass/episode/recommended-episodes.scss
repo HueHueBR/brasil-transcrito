@@ -1,0 +1,18 @@
+@import '../colors';
+
+.recommended-episodes {
+  margin-top: 30px;
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+
+    &::before {
+      display: block;
+      border: 1px solid $color-primary-0;
+      margin: .5em auto;
+      content: " ";
+      max-width: 20px;
+    }
+  }
+}

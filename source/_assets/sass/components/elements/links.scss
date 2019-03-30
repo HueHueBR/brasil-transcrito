@@ -1,0 +1,24 @@
+@import '../../colors';
+
+.link {
+  color: $color-primary-0;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($color-primary-0, 20%);
+    text-decoration: underline;
+  }
+
+  &--active {
+    color: darken($color-primary-0, 25%);
+  }
+
+  &--inactive {
+    color: darken($color-primary-0, 25%);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
