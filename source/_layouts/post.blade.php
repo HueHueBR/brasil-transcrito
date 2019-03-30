@@ -2,7 +2,7 @@
 
 @section('head')
     <title>
-        {{ $page->title }}
+        {{ $page->title }} | {{ $page->meta['title'] }}
     </title>
     
     <meta name="description" content="{{ $page->description }}">
