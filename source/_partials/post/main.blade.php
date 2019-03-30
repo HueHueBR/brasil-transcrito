@@ -7,8 +7,6 @@
         @include('_partials.post.commented')
     </section>
 
-    @include('_partials.post.comments')
-
     @include('_partials.post.recommendations.main', [
         'recommendations' => $page->recommended ?? []
     ])
