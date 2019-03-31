@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 category: Transcrição
+categorySlug: transcricao
 date: 1984-12-30
 title: 'PMs da Rota acusados de espancar família'
 description: 'Matéria conta o caso de Leocádio Birochi, 41 anos. Que alega ter sido espancado por PMs da rota após defender seu filho em uma abordagem abusiva dos policiais.'

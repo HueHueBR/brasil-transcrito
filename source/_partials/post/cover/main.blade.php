@@ -16,6 +16,6 @@
         <time property="na:datePublished" datetime="{{ $page->date }}" pubdate="pubdate">
             {{ date('d \d\e F \d\e Y', $page->date) }}
         </time>
-        | em <a class="episode__cover__details--bold link" href="{{ $page->baseUrl }}/categoria/{{ strtolower($page->category) }}">{{ $page->category }}</a>
+        | em <a class="episode__cover__details--bold link" href="{{ $page->getCategoryLink($page->categorySlug) }}">{{ $page->category }}</a>
     </small>
 </header>
