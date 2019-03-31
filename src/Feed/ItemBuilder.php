@@ -116,7 +116,7 @@ class ItemBuilder
         $element->appendChild($dom->createElement('itunes:duration', $this->duration));
         $element->appendChild($dom->createElement('guid', $this->guid));
         $element->appendChild($dom->createElement('pubDate', $this->pubDate));
-        $element->appendChild($dom->createElement('explicit', $this->explicit));
+        $element->appendChild($dom->createElement('itunes:explicit', $this->explicit));
 
         $element->appendChild($dom->createElement('googleplay:author', $this->author));
 
