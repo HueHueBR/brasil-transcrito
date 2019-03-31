@@ -11,6 +11,8 @@ return [
         'creatorName' => 'Brasil Transcrito',
         'title' => 'Brasil Transcrito',
         'subtitle' => '',
+        'category' => 'News &amp; Politics',
+        'image' => 'http://localhost:3000/assets/images/icons/favicon-180x180.png',
         'description' => 'Projeto acessível, gratuito e colaborativo para tornar disponível de forma simples para que internautas possam navegar pela história do Brasil.',
         'twitter' => [
             'card' => 'summary_large_image',

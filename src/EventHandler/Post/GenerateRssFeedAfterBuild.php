@@ -15,41 +15,39 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
     {
         $builder = (new FeedBuilder())
             ->channel()
-                ->title('PODEntender')
-                ->author('PODEntender')
+                ->title('Brasil Transcrito')
+                ->author('Brasil Transcrito')
                 ->link($jigsaw->getConfig('baseUrl'))
-                ->image($jigsaw->getConfig('meta.image'))
+                ->image($jigsaw->getConfig('meta.image') ?? '')
                 ->category($jigsaw->getConfig('meta.category'))
                 ->type('episodic')
                 ->language('pt-BR')
-                ->generator('PODEntender Static Blog');
+                ->generator('Brasil Transcrito Static Blog');
 
         $jigsaw
-            ->getCollection('episodes')
+            ->getCollection('posts')
             ->filter(function (PageVariable $episode) {
-                return false === is_null($episode->episode['audioUrl']);
+                return false === is_null($episode->audioUrl);
             })
-            ->sortByDesc(function (PageVariable $episode) {
-                return $episode->episode['number'];
-            })
+            ->sortByDesc('date')
             ->each(function (PageVariable $episode) use ($builder, $jigsaw) {
-                $cover = $episode->episode['cover']['url'] ?? '';
+                $cover = $episode->cover['url'] ?? '';
 
-                if (isset($episode->episode['cover']['rss'])) {
-                    $cover = $episode->episode['cover']['rss'];
+                if (isset($episode->cover['rss'])) {
+                    $cover = $episode->cover['rss'];
                 }
 
                 $builder->addItem()
-                    ->title($episode->episode['title'])
+                    ->title($episode->title)
                     ->link($episode->getUrl())
                     ->cover($episode->getBaseUrl() . $cover)
                     ->author($jigsaw->getConfig('meta.creatorName'))
-                    ->summary($episode->episode['description'])
+                    ->summary($episode->description)
                     ->guid($episode->getUrl())
-                    ->pubDate($episode->episode['date'])
+                    ->pubDate($episode->date)
                     ->addEnclosure()
-                        ->url($episode->episode['audioUrl'])
-                        ->length('0') //filesize($episode->episode['audioUrl']))
+                        ->url($episode->audioUrl)
+                        ->length('0')
                         ->type('audio/mpeg');
             });
 

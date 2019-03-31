@@ -3,6 +3,7 @@
 use BrasilTranscrito\EventHandler\Post\PostProcessFilesAfterBuild;
 use BrasilTranscrito\EventHandler\Category\GenerateCategoriesAfterCollections;
 use BrasilTranscrito\EventHandler\Post\DecorateConfigWithLatestPostsAfterCollections;
+use BrasilTranscrito\EventHandler\Post\GenerateRssFeedAfterBuild;
 use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
 
 /** @var $container \Illuminate\Container\Container */
@@ -26,5 +27,6 @@ $events->afterCollections([
 
 $events->afterBuild([
     SitemapListener::class,
+    GenerateRssFeedAfterBuild::class,
     PostProcessFilesAfterBuild::class,
 ]);
