@@ -1,6 +1,6 @@
 <?php
 
-namespace BrasilTranscrito\EventHandler\Episode;
+namespace BrasilTranscrito\EventHandler\Post;
 
 use Illuminate\Support\Collection;
 use BrasilTranscrito\EventHandler\HandlerInterface;

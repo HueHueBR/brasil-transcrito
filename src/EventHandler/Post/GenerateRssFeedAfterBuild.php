@@ -1,6 +1,6 @@
 <?php
 
-namespace BrasilTranscrito\EventHandler\Episode;
+namespace BrasilTranscrito\EventHandler\Post;
 
 use BrasilTranscrito\EventHandler\HandlerInterface;
 use BrasilTranscrito\Feed\FeedBuilder;

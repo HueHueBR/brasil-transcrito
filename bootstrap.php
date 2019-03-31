@@ -1,7 +1,8 @@
 <?php
 
-use BrasilTranscrito\EventHandler\Episode\PostProcessFilesAfterBuild;
+use BrasilTranscrito\EventHandler\Post\PostProcessFilesAfterBuild;
 use BrasilTranscrito\EventHandler\Category\GenerateCategoriesAfterCollections;
+use BrasilTranscrito\EventHandler\Post\DecorateConfigWithLatestPostsAfterCollections;
 use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
 
 /** @var $container \Illuminate\Container\Container */
@@ -20,6 +21,7 @@ use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
 
 $events->afterCollections([
     GenerateCategoriesAfterCollections::class,
+    DecorateConfigWithLatestPostsAfterCollections::class,
 ]);
 
 $events->afterBuild([
