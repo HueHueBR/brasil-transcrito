@@ -4,9 +4,7 @@ return [
     'production' => true,
     'baseUrl' => 'https://brasiltranscrito.huehue.eu',
 
-    'meta' => [
-        'image' => 'https://brasiltranscrito.huehue.eu/assets/images/icons/favicon-180x180.png',
-    ],
+    'meta' => require __DIR__ . '/config/meta.production.php',
 
     'googleAnalyticsId' => 'UA-137357513-1',
     // 'googleTagManagerId' => '',
