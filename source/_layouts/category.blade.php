@@ -1,11 +1,11 @@
 @extends('_layouts.master')
 
 @php
-$metaDescription = 'Episódios: ' . implode(
+$metaDescription = 'Publicações: ' . implode(
     ';',
     $pagination->items
-        ->map(function ($episode) {
-            return $episode->episode['title'];
+        ->map(function ($post) {
+            return $post->title;
         })
         ->toArray()
 );
@@ -22,60 +22,20 @@ $metaDescription = 'Episódios: ' . implode(
 <meta name="author" content="{{ $page->baseUrl }}">
 <meta name="publisher" content="{{ $page->baseUrl }}">
 
-<meta property="og:title" content="{{ $page->episode['title'] }}">
+<meta property="og:title" content="{{ $page->title }}">
 <meta property="og:description" content="{{ $metaDescription }}">
-<meta property="og:image" content="{{ $page->episode['cover']['url'] }}">
+<meta property="og:image" content="{{ $page->cover['url'] }}">
 <meta property="og:url" content="{{ $page->getUrl() }}">
 
 <meta name="twitter:card" content="{{ $page->meta['twitter']['card'] }}">
 <meta name="twitter:site" content="{{ $page->meta['twitter']['account'] }}">
 <meta name="twitter:creator" content="{{ $page->meta['twitter']['account'] }}">
-<meta name="twitter:title" content="{{ $page->episode['title'] }}">
+<meta name="twitter:title" content="{{ $page->title }}">
 <meta name="twitter:description" content="{{ $metaDescription }}">
-<meta name="twitter:image" content="{{ $page->episode['cover']['url'] }}">
+<meta name="twitter:image" content="{{ $page->cover['url'] }}">
 <meta name="twitter:url" content="{{ $page->getUrl() }}">
 
 <link rel="canonical" href="{{ $page->getUrl() }}">
-
-@include('_partials.meta.json-ld-script', [
-    'schema' => [
-        '@context' => 'http://schema.org',
-        '@type' => 'BreadcrumbList',
-        'itemListElement' => [
-            [
-                '@type' => 'ListItem',
-                'position' => 1,
-                'item' => [
-                    '@type' =>'WebPage',
-                    '@id' => $page->getBaseUrl(),
-                    'name' => $page->meta['title'],
-                    'image' => $page->meta['image'],
-                ],
-            ],
-            [
-                '@type' => 'ListItem',
-                'position' => 2,
-                'item' => [
-                    '@type' =>'CollectionPage',
-                    '@id' => $page->getUrl(),
-                    'name' => $page->pagination->collection,
-                    'image' => $page->meta['image'],
-                ],
-            ],
-            [
-                '@type' => 'ListItem',
-                'position' => 3,
-                'item' => [
-                    '@type' =>'CollectionPage',
-                    '@id' => $page->getUrl() . '#pg',
-                    'name' => sprintf('Categoria: %s, Página: %s', $page->pagination->collection, $pagination->currentPage),
-                    'image' => $page->meta['image'],
-                ],
-            ],
-        ]
-    ]
-])
-@endsection
 
 @section('body')
     @include('_partials.layout.header.navbar')
