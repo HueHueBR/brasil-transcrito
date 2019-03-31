@@ -16,6 +16,7 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
         $builder = (new FeedBuilder())
             ->channel()
                 ->title('Brasil Transcrito')
+                ->explicit('clean')
                 ->author('Brasil Transcrito')
                 ->link($jigsaw->getConfig('baseUrl'))
                 ->image($jigsaw->getConfig('meta.image') ?? '')
