@@ -41,7 +41,7 @@ return [
         'items' => [
             'Sobre' => '/sobre',
             'Todos' => '/categoria/todos',
-            'Entrevistas' => '/categoria/entrevista',
+            'Transcrições' => '/categoria/transcricao',
             'News' => '/categoria/news',
             'Drops' => '/categoria/drops',
         ],
