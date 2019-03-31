@@ -1,6 +1,7 @@
 <?php
 
 use BrasilTranscrito\EventHandler\Episode\PostProcessFilesAfterBuild;
+use BrasilTranscrito\EventHandler\Category\GenerateCategoriesAfterCollections;
 use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
 
 /** @var $container \Illuminate\Container\Container */
@@ -16,6 +17,10 @@ use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
  *     // Your code here
  * });
  */
+
+$events->afterCollections([
+    GenerateCategoriesAfterCollections::class,
+]);
 
 $events->afterBuild([
     SitemapListener::class,

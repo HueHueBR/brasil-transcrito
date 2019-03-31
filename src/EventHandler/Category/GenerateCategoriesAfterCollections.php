@@ -12,12 +12,13 @@ class GenerateCategoriesAfterCollections implements HandlerInterface
 
     public function handle(Jigsaw $jigsaw): void
     {
-        $episodes = $jigsaw->getCollection('episodes');
+        $collections = $jigsaw->getCollections();
+        foreach ($collections as $posts) {
+            $jigsaw->getSiteData()->put(self::COLLECTION_NAME_ALL, $posts);
 
-        $jigsaw->getSiteData()->put(self::COLLECTION_NAME_ALL, $episodes);
-
-        $episodes->groupBy('category')->each(function (Collection $episodes, string $category) use ($jigsaw) {
-            $jigsaw->getSiteData()->put($category, $episodes);
-        });
+            $posts->groupBy('category')->each(function (Collection $posts, string $category) use ($jigsaw) {
+                $jigsaw->getSiteData()->put($category, $posts);
+            });
+        }
     }
 }
