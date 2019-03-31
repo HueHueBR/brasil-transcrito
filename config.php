@@ -60,6 +60,9 @@ return [
 
     // Helper methods
     'url' => new \BrasilTranscrito\Helper\Url(),
+    'getCategoryLink' => function (\TightenCo\Jigsaw\PageVariable $page, string $name) {
+        return $page->getBaseUrl() . '/categoria/' . $name;
+    },
 
     'assets' => [
         'logo' => '/assets/images/logo.png',
