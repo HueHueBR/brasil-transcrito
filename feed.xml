@@ -3,6 +3,7 @@
   <channel>
     <title>Brasil Transcrito</title>
     <description>Projeto acessível, gratuito e colaborativo para tornar disponível de forma simples para que internautas possam navegar pela história do Brasil.</description>
+    <itunes:explicit>clean</itunes:explicit>
     <link>https://brasiltranscrito.huehue.eu</link>
     <language>pt-BR</language>
     <generator>Brasil Transcrito Static Blog</generator>
