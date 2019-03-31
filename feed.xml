@@ -2,12 +2,13 @@
 <rss xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Brasil Transcrito</title>
-    <description/>
+    <description>Projeto acessível, gratuito e colaborativo para tornar disponível de forma simples para que internautas possam navegar pela história do Brasil.</description>
     <link>https://brasiltranscrito.huehue.eu</link>
     <language>pt-BR</language>
     <generator>Brasil Transcrito Static Blog</generator>
     <category>News &amp; Politics</category>
     <type>episodic</type>
+    <explicit>false</explicit>
     <googleplay:author>Brasil Transcrito</googleplay:author>
     <googleplay:category>News &amp; Politics</googleplay:category>
     <googleplay:image href="https://brasiltranscrito.huehue.eu/assets/images/icons/favicon-1400x1400.png"/>
