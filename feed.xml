@@ -2,6 +2,7 @@
 <rss xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Brasil Transcrito</title>
+    <description/>
     <link>https://brasiltranscrito.huehue.eu</link>
     <language>pt-BR</language>
     <generator>Brasil Transcrito Static Blog</generator>
