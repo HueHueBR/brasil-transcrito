@@ -11,10 +11,7 @@ return [
         'creatorName' => 'Brasil Transcrito',
         'title' => 'Brasil Transcrito',
         'subtitle' => '',
-        'description' => 'Brasil Transcrito',
-        'category' => 'Science &amp; Medicine',
-        'image' => 'http://Brasil Transcrito.com/wp-content/uploads/powerpress/favcom.png',
-        'email' => 'amdnsk@gmail.com',
+        'description' => 'Projeto acessível, gratuito e colaborativo para tornar disponível de forma simples para que internautas possam navegar pela história do Brasil.',
         'twitter' => [
             'card' => 'summary_large_image',
             'account' => '@BrasilTranscrito',
@@ -29,10 +26,10 @@ return [
                     'contactType' => 'Customer Service',
                 ],
                 'sameAs' => [
-                    'https://www.facebook.com/Brasil Transcrito',
-                    'https://www.instagram.com/Brasil Transcrito',
-                    'https://www.twitter.com/Brasil Transcrito',
-                    'https://www.linkedin.com/company/Brasil Transcrito',
+//                    'https://www.facebook.com/Brasil Transcrito',
+//                    'https://www.instagram.com/Brasil Transcrito',
+//                    'https://www.twitter.com/Brasil Transcrito',
+//                    'https://www.linkedin.com/company/Brasil Transcrito',
                 ],
             ],
         ],
@@ -40,15 +37,13 @@ return [
     'menu' => [
         'items' => [
             'Sobre' => '/sobre',
-            'Todos' => '/categoria/todos',
+//            'Todos' => '/categoria/todos',
             'Transcrições' => '/categoria/transcricao',
-            'News' => '/categoria/news',
-            'Drops' => '/categoria/drops',
         ],
         'social' => [
-            'Facebook' => 'https://www.facebook.com/Brasil Transcrito',
-            'Instagram' => 'https://www.instagram.com/Brasil Transcrito',
-            'Twitter' => 'https://www.twitter.com/Brasil Transcrito',
+//            'Facebook' => 'https://www.facebook.com/Brasil Transcrito',
+//            'Instagram' => 'https://www.instagram.com/Brasil Transcrito',
+//            'Twitter' => 'https://www.twitter.com/Brasil Transcrito',
         ],
     ],
     'collections' => [
