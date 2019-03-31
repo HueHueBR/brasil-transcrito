@@ -11,6 +11,9 @@ class ChannelBuilder
     private $title;
 
     /** @var string */
+    private $description;
+
+    /** @var string */
     private $author;
 
     /** @var string */
@@ -45,6 +48,12 @@ class ChannelBuilder
     public function title(string $title): ChannelBuilder
     {
         $this->title = $title;
+        return $this;
+    }
+
+    public function description(string $description): ChannelBuilder
+    {
+        $this->description = $description;
         return $this;
     }
 
@@ -113,6 +122,7 @@ class ChannelBuilder
     {
         $element = $dom->createElement('channel');
         $element->appendChild($dom->createElement('title', $this->title));
+        $element->appendChild($dom->createElement('description', $this->description));
         $element->appendChild($dom->createElement('link', $this->link));
         $element->appendChild($dom->createElement('language', $this->language));
         $element->appendChild($dom->createElement('generator', $this->generator));
