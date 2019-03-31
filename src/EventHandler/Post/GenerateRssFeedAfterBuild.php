@@ -21,7 +21,6 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
                 ->image($jigsaw->getConfig('meta.image') ?? '')
                 ->category($jigsaw->getConfig('meta.category'))
                 ->type('episodic')
-                ->explicit(false)
                 ->description($jigsaw->getConfig('meta.description'))
                 ->language('pt-BR')
                 ->generator('Brasil Transcrito Static Blog');
@@ -47,6 +46,7 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
                     ->summary($episode->description)
                     ->guid($episode->getUrl())
                     ->pubDate($episode->date)
+                    ->explicit('clean')
                     ->addEnclosure()
                         ->url($episode->audioUrl)
                         ->length('0')

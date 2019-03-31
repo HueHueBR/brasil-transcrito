@@ -34,9 +34,6 @@ class ChannelBuilder
     /** @var string */
     private $language;
 
-    /** @var bool */
-    private $explicit;
-
     /** @var array FeedItem[] */
     private $items = [];
 
@@ -99,12 +96,6 @@ class ChannelBuilder
         return $this;
     }
 
-    public function explicit(bool $explicit): ChannelBuilder
-    {
-        $this->explicit = $explicit;
-        return $this;
-    }
-
     public function addItem(): ItemBuilder
     {
         $itemBuilder = new ItemBuilder($this);
@@ -128,7 +119,6 @@ class ChannelBuilder
         $element->appendChild($dom->createElement('generator', $this->generator));
         $element->appendChild($dom->createElement('category', $this->category));
         $element->appendChild($dom->createElement('type', $this->type));
-        $element->appendChild($dom->createElement('explicit', $this->explicit ? 'true' : 'false'));
 
         $element->appendChild($dom->createElement('googleplay:author', $this->author));
         $element->appendChild($dom->createElement('googleplay:category', $this->category));

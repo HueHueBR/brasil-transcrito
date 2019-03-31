@@ -33,6 +33,9 @@ class ItemBuilder
     /** @var string */
     private $pubDate;
 
+    /** @var string */
+    private $explicit;
+
     /** @var EnclosureBuilder[] */
     private $enclosures = [];
 
@@ -89,6 +92,12 @@ class ItemBuilder
         return $this;
     }
 
+    public function explicit(string $explicit): ItemBuilder
+    {
+        $this->explicit = $explicit;
+        return $this;
+    }
+
     public function addEnclosure(): EnclosureBuilder
     {
         $enclosureBuilder = new EnclosureBuilder($this);
@@ -107,6 +116,7 @@ class ItemBuilder
         $element->appendChild($dom->createElement('itunes:duration', $this->duration));
         $element->appendChild($dom->createElement('guid', $this->guid));
         $element->appendChild($dom->createElement('pubDate', $this->pubDate));
+        $element->appendChild($dom->createElement('explicit', $this->explicit));
 
         $element->appendChild($dom->createElement('googleplay:author', $this->author));
 
