@@ -26,21 +26,18 @@ $field = function (string $name, string $value, ?int $size = null) use ($show) {
     @endif
 
     <ul class="episode-card-list__list">
-        @foreach($episodes as $episode)
+        @foreach($episodes as $post)
             <li class="episode-card-list__list-item">
                 @include('_partials.post.episode-card', [
                     'classes' => [
                         'episode-card--no-padding',
                     ],
                     'episode' => [
-                        'url' => $field('url', $episode->getUrl()) ?? '#',
-                        'image' => $field('image', $page->baseUrl . $episode->episode['cover']['url']),
-                        'timestamp' => $field('timestamp', $episode->episode['date']),
-                        'title' => $field(
-                            'title',
-                            "Episódio #{$episode->episode['number']} - {$episode->episode['title']}"
-                        ),
-                        'description' => $field('description', $episode->episode['description'], 120),
+                        'url' => $field('url', $post->getUrl()) ?? '#',
+                        'image' => $field('image', $page->baseUrl . $post->cover['url']),
+                        'timestamp' => $field('timestamp', $post->date),
+                        'title' => $field('title', $post->title),
+                        'description' => $field('description', $post->description, 120),
                     ],
                 ])
             </li>
