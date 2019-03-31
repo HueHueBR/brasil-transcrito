@@ -22,6 +22,7 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
                 ->category($jigsaw->getConfig('meta.category'))
                 ->type('episodic')
                 ->explicit(false)
+                ->description($jigsaw->getConfig('meta.description'))
                 ->language('pt-BR')
                 ->generator('Brasil Transcrito Static Blog');
 
