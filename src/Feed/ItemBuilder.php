@@ -112,6 +112,7 @@ class ItemBuilder
         $element->appendChild($dom->createElement('title', $this->title));
         $element->appendChild($dom->createElement('link', $this->link));
         $element->appendChild($dom->createElement('itunes:author', $this->author));
+        $element->appendChild($dom->createElement('author', $this->author));
         $element->appendChild($dom->createElement('itunes:summary', $this->summary));
         $element->appendChild($dom->createElement('itunes:duration', $this->duration));
         $element->appendChild($dom->createElement('guid', $this->guid));
