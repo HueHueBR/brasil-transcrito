@@ -2,6 +2,11 @@ language: php
 php:
   - 7.1
 
+addons:
+  apt:
+    packages:
+      - language-pack-pt
+
 cache:
   directories:
     - $HOME/.composer/cache/files
