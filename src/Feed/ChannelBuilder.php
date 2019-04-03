@@ -175,7 +175,7 @@ class ChannelBuilder
         $element->appendChild($dom->createElement('language', $this->language));
         $element->appendChild($dom->createElement('generator', $this->generator));
         $element->appendChild($dom->createElement('managingEditor', $this->managingEditor));
-        $element->appendChild($dom->createElement('category', $this->category));
+        $element->appendChild($dom->createElement('category', htmlentities($this->category)));
 
         $image = $dom->createElement('image');
         $image->appendChild($dom->createElement('title', $this->title));
