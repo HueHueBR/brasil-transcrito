@@ -4,6 +4,7 @@ namespace BrasilTranscrito\EventHandler\Post;
 
 use BrasilTranscrito\EventHandler\HandlerInterface;
 use BrasilTranscrito\Feed\FeedBuilder;
+use BrasilTranscrito\Feed\ItemBuilder;
 use TightenCo\Jigsaw\Jigsaw;
 use TightenCo\Jigsaw\PageVariable;
 
@@ -15,16 +16,21 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
     {
         $builder = (new FeedBuilder())
             ->channel()
-                ->title('Brasil Transcrito')
-                ->explicit('clean')
-                ->author('Brasil Transcrito')
-                ->link($jigsaw->getConfig('baseUrl'))
-                ->image($jigsaw->getConfig('meta.image') ?? '')
-                ->category($jigsaw->getConfig('meta.category'))
-                ->type('episodic')
-                ->description($jigsaw->getConfig('meta.description'))
-                ->language('pt-BR')
-                ->generator('Brasil Transcrito Static Blog');
+                ->title($jigsaw->getConfig('feed.title'))
+                ->subtitle($jigsaw->getConfig('feed.subtitle'))
+                ->description($jigsaw->getConfig('feed.description'))
+                ->lastBuildDate($jigsaw->getConfig('feed.lastBuildDate'))
+                ->language($jigsaw->getConfig('feed.language'))
+                ->generator($jigsaw->getConfig('feed.generator'))
+                ->managingEditor($jigsaw->getConfig('feed.managingEditor'))
+                ->imageUrl($jigsaw->getConfig('feed.imageUrl'))
+                ->url($jigsaw->getConfig('feed.url'))
+                ->feedUrl($jigsaw->getConfig('feed.feedUrl'))
+                ->author($jigsaw->getConfig('feed.author'))
+                ->explicit($jigsaw->getConfig('feed.explicit'))
+                ->type($jigsaw->getConfig('feed.type'))
+                ->email($jigsaw->getConfig('feed.email'))
+                ->category($jigsaw->getConfig('feed.category'));
 
         $jigsaw
             ->getCollection('posts')
@@ -33,27 +39,22 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
             })
             ->sortByDesc('date')
             ->each(function (PageVariable $episode) use ($builder, $jigsaw) {
-                $cover = $episode->cover['url'] ?? '';
-
-                if (isset($episode->cover['rss'])) {
-                    $cover = $episode->cover['rss'];
-                }
-
                 $builder->addItem()
-                    ->title($episode->title)
-                    ->link($episode->getUrl())
-                    ->cover($episode->getBaseUrl() . $cover)
-                    ->author($jigsaw->getConfig('meta.creatorName'))
-                    ->summary($episode->description)
                     ->guid($episode->getUrl())
-                    ->pubDate($episode->date)
-                    ->explicit('clean')
+                    ->title($episode->title)
+                    ->subtitle($episode->description)
+                    ->description($episode->description)
+                    ->author($jigsaw->getConfig('feed.author'))
+                    ->link($episode->getUrl())
+                    ->comments($episode->getUrl())
+                    ->pubDate(date(ItemBuilder::DATE_FORMAT, $episode->date))
+                    ->explicit($jigsaw->getConfig('feed.explicit'))
+                    ->duration($episode->duration)
                     ->addEnclosure()
                         ->url($episode->audioUrl)
                         ->length('0')
                         ->type('audio/mpeg');
             });
-
         $xmlFeed = $builder->close()->toXml();
         $file = implode(DIRECTORY_SEPARATOR, [$jigsaw->getDestinationPath(), self::OUTPUT_FILE]);
 

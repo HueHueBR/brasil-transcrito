@@ -8,6 +8,7 @@ return [
     'googleAnalyticsId' => 'GA-TEST-ID',
     'googleTagManagerId' => 'GTM-TEST-ID',
     'meta' => require __DIR__ . '/config/meta.php',
+    'feed' => require __DIR__ . '/config/feed.php',
     'menu' => [
         'items' => [
             'Sobre' => '/sobre',
