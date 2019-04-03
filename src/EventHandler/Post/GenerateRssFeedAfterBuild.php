@@ -50,6 +50,7 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
                     ->pubDate(date(ItemBuilder::DATE_FORMAT, $episode->date))
                     ->explicit($jigsaw->getConfig('feed.explicit'))
                     ->duration($episode->duration)
+                    ->addCategory($jigsaw->getConfig('feed.category'))
                     ->addEnclosure()
                         ->url($episode->audioUrl)
                         ->length('0')
