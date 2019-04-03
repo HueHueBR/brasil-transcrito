@@ -193,7 +193,9 @@ class ChannelBuilder
         $element->appendChild($dom->createElement('itunes:author', $this->author));
         $element->appendChild($dom->createElement('itunes:explicit', $this->explicit));
         $element->appendChild($dom->createElement('itunes:type', $this->type));
-        $element->appendChild($dom->createElement('itunes:category', $this->category));
+        $category = $dom->createElement('itunes:category');
+        $category->setAttribute('text', $this->category);
+        $element->appendChild($category);
 
         $itunesImage = $dom->createElement('itunes:image');
         $itunesImage->setAttribute('href', $this->imageUrl);
