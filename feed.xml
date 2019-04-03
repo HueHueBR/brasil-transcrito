@@ -4,7 +4,7 @@
     <title>Brasil Transcrito</title>
     <link>https://brasiltranscrito.huehue.eu</link>
     <description>O projeto Brasil Transcrito é um esforço independente para transcrever obras jornalísticas e documentos de algumas décadas atrás, disponíveis em forma digital porém não indexáveis por mecanismos de busca por se encontrarem no formato "imagem".</description>
-    <lastBuildDate>Wed, 03 Apr 2019 22:38:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2019 22:50:21 +0000</lastBuildDate>
     <language>pt-BR</language>
     <generator>Brasil Transcrito static website</generator>
     <managingEditor>aquiehbrporra@gmail.com (Brasil Transcrito)</managingEditor>
@@ -19,7 +19,7 @@
     <itunes:author>Brasil Transcrito</itunes:author>
     <itunes:explicit>clean</itunes:explicit>
     <itunes:type>episodic</itunes:type>
-    <itunes:category>News &amp; Politics</itunes:category>
+    <itunes:category text="News &amp;amp; Politics"/>
     <itunes:image href="https://brasiltranscrito.huehue.eu/assets/images/icons/favicon-1400x1400.png"/>
     <itunes:owner>
       <itunes:name>Brasil Transcrito</itunes:name>
