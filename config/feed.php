@@ -12,7 +12,7 @@ return [
     'generator' => 'Brasil Transcrito static website',
     'managingEditor' => 'aquiehbrporra@gmail.com (Brasil Transcrito)',
     'email' => 'aquiehbrporra@gmail.com',
-    'category' => 'News &amp; Politics',
+    'category' => 'News & Politics',
     'imageUrl' => 'https://brasiltranscrito.huehue.eu/assets/images/icons/favicon-1400x1400.png',
     'feedUrl' => 'https://brasiltranscrito.huehue.eu/feed.xml',
     'url' => 'https://brasiltranscrito.huehue.eu',

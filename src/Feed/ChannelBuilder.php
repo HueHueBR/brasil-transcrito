@@ -175,6 +175,7 @@ class ChannelBuilder
         $element->appendChild($dom->createElement('language', $this->language));
         $element->appendChild($dom->createElement('generator', $this->generator));
         $element->appendChild($dom->createElement('managingEditor', $this->managingEditor));
+        $element->appendChild($dom->createElement('category', $this->category));
 
         $image = $dom->createElement('image');
         $image->appendChild($dom->createElement('title', $this->title));
@@ -193,6 +194,7 @@ class ChannelBuilder
         $element->appendChild($dom->createElement('itunes:author', $this->author));
         $element->appendChild($dom->createElement('itunes:explicit', $this->explicit));
         $element->appendChild($dom->createElement('itunes:type', $this->type));
+
         $category = $dom->createElement('itunes:category');
         $category->setAttribute('text', $this->category);
         $element->appendChild($category);
