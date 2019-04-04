@@ -4,7 +4,7 @@
     <title>Brasil Transcrito</title>
     <link>https://brasiltranscrito.huehue.eu</link>
     <description>O projeto Brasil Transcrito é um esforço independente para transcrever obras jornalísticas e documentos de algumas décadas atrás, disponíveis em forma digital porém não indexáveis por mecanismos de busca por se encontrarem no formato "imagem".</description>
-    <lastBuildDate>Thu, 04 Apr 2019 16:03:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 21:32:02 +0000</lastBuildDate>
     <language>pt-BR</language>
     <generator>Brasil Transcrito static website</generator>
     <managingEditor>aquiehbrporra@gmail.com (Brasil Transcrito)</managingEditor>
@@ -40,6 +40,20 @@
       <itunes:author>Brasil Transcrito</itunes:author>
       <itunes:explicit>clean</itunes:explicit>
       <itunes:duration>00:04:54</itunes:duration>
+    </item>
+    <item>
+      <guid>https://brasiltranscrito.huehue.eu/p/caravanas-dos-estados-para-a-marcha</guid>
+      <title>Caravanas dos Estados para a “Marcha”</title>
+      <link>https://brasiltranscrito.huehue.eu/p/caravanas-dos-estados-para-a-marcha</link>
+      <comments>https://brasiltranscrito.huehue.eu/p/caravanas-dos-estados-para-a-marcha</comments>
+      <pubDate>Mon, 30 Mar 1964 00:00:00 +0000</pubDate>
+      <category>News &amp; Politics</category>
+      <enclosure url="https://archive.org/download/CaravanasDosEstadosParaAMarcha/Caravanas_dos_Estados_para_a_Marcha.mp3" length="0" type="audio/mpeg"/>
+      <itunes:subtitle>Notícia da Folha de São Paulo sobre caravanas que se organizaram para a Marcha da Família com Deus pela Liberdade em 1964.</itunes:subtitle>
+      <itunes:summary>Notícia da Folha de São Paulo sobre caravanas que se organizaram para a Marcha da Família com Deus pela Liberdade em 1964.</itunes:summary>
+      <itunes:author>Brasil Transcrito</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>00:03:07</itunes:duration>
     </item>
   </channel>
 </rss>
