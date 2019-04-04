@@ -37,7 +37,7 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
             ->filter(function (PageVariable $episode) {
                 return false === is_null($episode->audioUrl);
             })
-            ->sortByDesc('date')
+            ->sortByDesc('postDate')
             ->each(function (PageVariable $episode) use ($builder, $jigsaw) {
                 $builder->addItem()
                     ->guid($episode->getUrl())
