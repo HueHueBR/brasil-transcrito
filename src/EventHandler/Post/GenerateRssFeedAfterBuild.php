@@ -47,7 +47,7 @@ class GenerateRssFeedAfterBuild implements HandlerInterface
                     ->author($jigsaw->getConfig('feed.author'))
                     ->link($episode->getUrl())
                     ->comments($episode->getUrl())
-                    ->pubDate(date(ItemBuilder::DATE_FORMAT, $episode->date))
+                    ->pubDate(date(ItemBuilder::DATE_FORMAT, $episode->postDate))
                     ->explicit($jigsaw->getConfig('feed.explicit'))
                     ->duration($episode->duration)
                     ->addCategory($jigsaw->getConfig('feed.category'))
