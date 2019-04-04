@@ -4,7 +4,7 @@
     <title>Brasil Transcrito</title>
     <link>https://brasiltranscrito.huehue.eu</link>
     <description>O projeto Brasil Transcrito é um esforço independente para transcrever obras jornalísticas e documentos de algumas décadas atrás, disponíveis em forma digital porém não indexáveis por mecanismos de busca por se encontrarem no formato "imagem".</description>
-    <lastBuildDate>Thu, 04 Apr 2019 22:18:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 22:26:01 +0000</lastBuildDate>
     <language>pt-BR</language>
     <generator>Brasil Transcrito static website</generator>
     <managingEditor>aquiehbrporra@gmail.com (Brasil Transcrito)</managingEditor>
@@ -28,20 +28,6 @@
     </itunes:owner>
     <googleplay:description>O projeto Brasil Transcrito é um esforço independente para transcrever obras jornalísticas e documentos de algumas décadas atrás, disponíveis em forma digital porém não indexáveis por mecanismos de busca por se encontrarem no formato "imagem".</googleplay:description>
     <item>
-      <guid>https://brasiltranscrito.huehue.eu/p/pms-da-rota-acusados-de-espancar-familia</guid>
-      <title>PMs da Rota acusados de espancar família</title>
-      <link>https://brasiltranscrito.huehue.eu/p/pms-da-rota-acusados-de-espancar-familia</link>
-      <comments>https://brasiltranscrito.huehue.eu/p/pms-da-rota-acusados-de-espancar-familia</comments>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      <category>News &amp; Politics</category>
-      <enclosure url="https://archive.org/download/1984-12-30-pms_da_rota_acusados_de_espancar_familia/pms_da_rota_acusados_de_espancar_familia.mp3" length="0" type="audio/mpeg"/>
-      <itunes:subtitle>Matéria conta o caso de Leocádio Birochi, 41 anos. Que alega ter sido espancado por PMs da rota após defender seu filho em uma abordagem abusiva dos policiais.</itunes:subtitle>
-      <itunes:summary>Matéria conta o caso de Leocádio Birochi, 41 anos. Que alega ter sido espancado por PMs da rota após defender seu filho em uma abordagem abusiva dos policiais.</itunes:summary>
-      <itunes:author>Brasil Transcrito</itunes:author>
-      <itunes:explicit>clean</itunes:explicit>
-      <itunes:duration>00:04:54</itunes:duration>
-    </item>
-    <item>
       <guid>https://brasiltranscrito.huehue.eu/p/caravanas-dos-estados-para-a-marcha</guid>
       <title>Caravanas dos Estados para a “Marcha”</title>
       <link>https://brasiltranscrito.huehue.eu/p/caravanas-dos-estados-para-a-marcha</link>
@@ -54,6 +40,20 @@
       <itunes:author>Brasil Transcrito</itunes:author>
       <itunes:explicit>clean</itunes:explicit>
       <itunes:duration>00:03:07</itunes:duration>
+    </item>
+    <item>
+      <guid>https://brasiltranscrito.huehue.eu/p/pms-da-rota-acusados-de-espancar-familia</guid>
+      <title>PMs da Rota acusados de espancar família</title>
+      <link>https://brasiltranscrito.huehue.eu/p/pms-da-rota-acusados-de-espancar-familia</link>
+      <comments>https://brasiltranscrito.huehue.eu/p/pms-da-rota-acusados-de-espancar-familia</comments>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      <category>News &amp; Politics</category>
+      <enclosure url="https://archive.org/download/1984-12-30-pms_da_rota_acusados_de_espancar_familia/pms_da_rota_acusados_de_espancar_familia.mp3" length="0" type="audio/mpeg"/>
+      <itunes:subtitle>Matéria conta o caso de Leocádio Birochi, 41 anos. Que alega ter sido espancado por PMs da rota após defender seu filho em uma abordagem abusiva dos policiais.</itunes:subtitle>
+      <itunes:summary>Matéria conta o caso de Leocádio Birochi, 41 anos. Que alega ter sido espancado por PMs da rota após defender seu filho em uma abordagem abusiva dos policiais.</itunes:summary>
+      <itunes:author>Brasil Transcrito</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>00:04:54</itunes:duration>
     </item>
   </channel>
 </rss>
