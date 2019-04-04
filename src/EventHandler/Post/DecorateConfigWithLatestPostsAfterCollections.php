@@ -18,6 +18,6 @@ class DecorateConfigWithLatestPostsAfterCollections implements HandlerInterface
 
     private function getLastPost(PageVariable $pages): PageVariable
     {
-        return $pages->sortByDesc('date')->first();
+        return $pages->sortByDesc('postDate')->first();
     }
 }
