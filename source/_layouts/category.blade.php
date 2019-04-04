@@ -52,7 +52,7 @@ $metaDescription = 'Publicações: ' . implode(
             'nextPath' => $pagination->next,
         ])
 
-        @include('_partials.post.episode-card-list', [
+        @include('_partials.post.post-card-list', [
             'title' => '',
             'episodes' => $pagination->items,
             'hidden' => [],

@@ -13,6 +13,8 @@ cover:
   url: '/assets/images/posts/caravanas-dos-estados-para-a-marcha/capa.png'
   title: ''
 tags:
+  - folha
+  - sp
   - passeata
   - familia
   - regime

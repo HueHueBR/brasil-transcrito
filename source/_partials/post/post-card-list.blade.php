@@ -17,22 +17,22 @@ $field = function (string $name, string $value, ?int $size = null) use ($show) {
 };
 @endphp
 
-@if(count($episodes) > 0)
-<section class="episode-card-list">
+@if(count($posts) > 0)
+<section class="post-card-list">
     @if($title)
-    <h1 class="episode-card-list__title">
+    <h1 class="post-card-list__title">
         {{ $title  }}
     </h1>
     @endif
 
-    <ul class="episode-card-list__list">
-        @foreach($episodes as $post)
-            <li class="episode-card-list__list-item">
-                @include('_partials.post.episode-card', [
+    <ul class="post-card-list__list">
+        @foreach($posts as $post)
+            <li class="post-card-list__list-item">
+                @include('_partials.post.post-card', [
                     'classes' => [
-                        'episode-card--no-padding',
+                        'post-card--no-padding',
                     ],
-                    'episode' => [
+                    'post' => [
                         'url' => $field('url', $post->getUrl()) ?? '#',
                         'image' => $field('image', $page->baseUrl . $post->cover['url']),
                         'timestamp' => $field('timestamp', $post->date),

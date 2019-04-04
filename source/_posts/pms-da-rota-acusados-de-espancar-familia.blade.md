@@ -13,6 +13,8 @@ cover:
   url: '/assets/images/posts/pms-da-rota-acusados-de-espancar-familia/capa.png'
   title: ''
 tags:
+  - folha
+  - sao paulo 
   - rota
   - espancamento
   - familia

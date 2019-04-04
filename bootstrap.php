@@ -3,6 +3,7 @@
 use BrasilTranscrito\EventHandler\Post\PostProcessFilesAfterBuild;
 use BrasilTranscrito\EventHandler\Category\GenerateCategoriesAfterCollections;
 use BrasilTranscrito\EventHandler\Post\DecorateConfigWithLatestPostsAfterCollections;
+use BrasilTranscrito\EventHandler\Post\GenerateRecommendedEpisodeListAfterCollections;
 use BrasilTranscrito\EventHandler\Post\GenerateRssFeedAfterBuild;
 use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
 
@@ -23,6 +24,7 @@ use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
 $events->afterCollections([
     GenerateCategoriesAfterCollections::class,
     DecorateConfigWithLatestPostsAfterCollections::class,
+    GenerateRecommendedEpisodeListAfterCollections::class,
 ]);
 
 $events->afterBuild([

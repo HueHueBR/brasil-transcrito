@@ -1,10 +1,10 @@
 @if(count($recommendations) > 0)
 <section class="recommended-episodes">
-    <h1 class="recommended-episodes__title">{{ $title ?? 'Para você continuar entendendo' }}</h1>
+    <h1 class="recommended-episodes__title">{{ $title ?? 'Relacionados a esta publicação' }}</h1>
 
-    @include('_partials.post.episode-card-list', [
+    @include('_partials.post.post-card-list', [
         'title' => '',
-        'episodes' => $recommendations,
+        'posts' => $recommendations,
         'hidden' => ['description']
     ])
 </section>
