@@ -7,8 +7,8 @@ use InvalidArgumentException;
 
 class PostCollection extends ArrayObject
 {
-    public function __construct(array $images = []) {
-        $nonPostItems = array_filter($images, function ($post) {
+    public function __construct(array $posts = []) {
+        $nonPostItems = array_filter($posts, function ($post) {
             return !$post instanceof Post;
         });
 
@@ -16,6 +16,6 @@ class PostCollection extends ArrayObject
             throw new InvalidArgumentException('PostCollection elements must be instanceof Post.');
         }
 
-        parent::__construct($images);
+        parent::__construct($posts);
     }
 }
