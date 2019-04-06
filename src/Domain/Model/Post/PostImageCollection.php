@@ -2,18 +2,20 @@
 
 namespace BrasilTranscrito\Domain\Model\Post;
 
-class PostImageCollection
+use ArrayObject;
+use InvalidArgumentException;
+
+class PostImageCollection extends ArrayObject
 {
-    /** @var PostImage[] */
-    private $images = [];
+    public function __construct(array $images = []) {
+        $nonPostImageItems = array_filter($images, function ($postImage) {
+            return !$postImage instanceof PostImage;
+        });
 
-    public function __construct(array $images)
-    {
-        $this->images = $images;
-    }
+        if (count($nonPostImageItems) > 0) {
+            throw new InvalidArgumentException('PostImageCollection elements must be instanceof PostImage.');
+        }
 
-    public function images(): array
-    {
-        return $this->images;
+        parent::__construct($images);
     }
 }
