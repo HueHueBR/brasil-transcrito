@@ -30,6 +30,11 @@ return [
 
     // Helper methods
     'url' => new \BrasilTranscrito\Helper\Url(),
+    'makePostEntity' => function (\TightenCo\Jigsaw\PageVariable $page) {
+        $factory = new \BrasilTranscrito\Infrastructure\Domain\Factory\JigsawPostFactory();
+
+        return $factory->newPostFromPageVariable($page);
+    },
     'getCategoryLink' => function (\TightenCo\Jigsaw\PageVariable $page, string $name) {
         return $page->getBaseUrl() . '/categoria/' . $name;
     },
