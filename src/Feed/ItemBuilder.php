@@ -141,7 +141,10 @@ class ItemBuilder
         $element->appendChild($dom->createElement('pubDate', $this->pubDate));
 
         foreach ($this->categories as $category) {
-            $element->appendChild($dom->createElement('category', htmlentities($category)));
+            $categoryCdata = $dom->createCDATASection($category);
+            $categoryElement = $dom->createElement('category');
+            $categoryElement->appendChild($categoryCdata);
+            $element->appendChild($categoryElement);
         }
 
         foreach ($this->enclosures as $enclosure) {
