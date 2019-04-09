@@ -6,12 +6,17 @@ use BrasilTranscrito\Infrastructure\Domain\Factory\JigsawPostFactory;
 
 return [
     'url' => new Url(),
+    'getCategoryLink' => function (PageVariable $page, string $name) {
+        return $page->getBaseUrl() . '/categoria/' . $name;
+    },
     'makePostEntity' => function (PageVariable $page) {
         $factory = new JigsawPostFactory();
 
         return $factory->newPostFromPageVariable($page);
     },
-    'getCategoryLink' => function (PageVariable $page, string $name) {
-        return $page->getBaseUrl() . '/categoria/' . $name;
+    'makeAudioEpisodeEntity' => function (PageVariable $page) {
+        $factory = new JigsawPostFactory();
+
+        return $factory->newAudioEpisodeFromPageVariable($page);
     },
 ];

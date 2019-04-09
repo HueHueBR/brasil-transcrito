@@ -4,22 +4,17 @@ use BrasilTranscrito\EventHandler\Post\PostProcessFilesAfterBuild;
 use BrasilTranscrito\EventHandler\Category\GenerateCategoriesAfterCollections;
 use BrasilTranscrito\EventHandler\Post\DecorateConfigWithLatestPostsAfterCollections;
 use BrasilTranscrito\EventHandler\Post\GenerateRecommendedEpisodeListAfterCollections;
-use BrasilTranscrito\EventHandler\Post\GenerateRssFeedAfterBuild;
+use BrasilTranscrito\Infrastructure\Application\Service\FileProcessing\JigsawGenerateRssFeed;
 use Nawarian\JigsawSitemapPlugin\Listener\SitemapListener;
+use TightenCo\Jigsaw\Jigsaw;
 
 /** @var $container \Illuminate\Container\Container */
 /** @var $events \TightenCo\Jigsaw\Events\EventBus */
 
-/**
- * You can run custom code at different stages of the build process by
- * listening to the 'beforeBuild', 'afterCollections', and 'afterBuild' events.
- *
- * For example:
- *
- * $events->beforeBuild(function (Jigsaw $jigsaw) {
- *     // Your code here
- * });
- */
+$events->beforeBuild(function (Jigsaw $jigsaw) use ($container) {
+    $configureDependencyInjection = require __DIR__ . '/config/dependency-injection.php';
+    $configureDependencyInjection($container, $jigsaw);
+});
 
 $events->afterCollections([
     GenerateCategoriesAfterCollections::class,
@@ -29,6 +24,6 @@ $events->afterCollections([
 
 $events->afterBuild([
     SitemapListener::class,
-    GenerateRssFeedAfterBuild::class,
+    JigsawGenerateRssFeed::class,
     PostProcessFilesAfterBuild::class,
 ]);

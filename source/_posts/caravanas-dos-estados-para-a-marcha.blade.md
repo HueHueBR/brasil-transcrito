@@ -7,8 +7,10 @@ date: 1964-03-30
 postDate: 2019-04-04
 title: 'Caravanas dos Estados para a “Marcha”'
 description: 'Notícia da Folha de São Paulo sobre caravanas que se organizaram para a Marcha da Família com Deus pela Liberdade em 1964.'
-audioUrl: https://archive.org/download/CaravanasDosEstadosParaAMarcha/Caravanas_dos_Estados_para_a_Marcha.mp3
-duration: 00:03:07
+audio:
+    url: https://archive.org/download/CaravanasDosEstadosParaAMarcha/Caravanas_dos_Estados_para_a_Marcha.mp3
+    duration: 00:03:07
+    cover: '/assets/images/posts/caravanas-dos-estados-para-a-marcha/capa.png'
 cover:
   url: '/assets/images/posts/caravanas-dos-estados-para-a-marcha/capa.png'
   title: ''

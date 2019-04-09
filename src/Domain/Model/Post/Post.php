@@ -10,10 +10,16 @@ class Post
     private $guid;
 
     /** @var string */
+    private $url;
+
+    /** @var string */
     private $title;
 
     /** @var string */
     private $description;
+
+    /** @var string */
+    private $author;
 
     /** @var string */
     private $content;
@@ -32,8 +38,10 @@ class Post
 
     public function __construct(
         string $guid,
+        string $url,
         string $title,
         string $description,
+        string $author,
         string $content,
         string $category,
         PostImageCollection $images,
@@ -41,8 +49,10 @@ class Post
         DateTimeInterface $updatedAt
     ) {
         $this->guid = $guid;
+        $this->url = $url;
         $this->title = $title;
         $this->description = $description;
+        $this->author = $author;
         $this->content = $content;
         $this->category = $category;
         $this->images = $images;
@@ -55,6 +65,11 @@ class Post
         return $this->guid;
     }
 
+    public function url(): string
+    {
+        return $this->url;
+    }
+
     public function title(): string
     {
         return $this->title;
@@ -63,6 +78,11 @@ class Post
     public function description(): string
     {
         return $this->description;
+    }
+
+    public function author(): string
+    {
+        return $this->author;
     }
 
     public function content(): string

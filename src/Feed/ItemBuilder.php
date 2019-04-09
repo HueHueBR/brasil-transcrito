@@ -21,6 +21,9 @@ class ItemBuilder
     private $link;
 
     /** @var string */
+    private $image;
+
+    /** @var string */
     private $comments;
 
     /** @var string */
@@ -70,6 +73,12 @@ class ItemBuilder
     public function link(string $link): self
     {
         $this->link = $link;
+        return $this;
+    }
+
+    public function image(string $image): self
+    {
+        $this->image = $image;
         return $this;
     }
 
@@ -144,6 +153,13 @@ class ItemBuilder
         $element->appendChild($dom->createElement('itunes:author', $this->author));
         $element->appendChild($dom->createElement('itunes:explicit', $this->explicit));
         $element->appendChild($dom->createElement('itunes:duration', $this->duration));
+
+        if ($this->image) {
+            $coverImage = $dom->createElement('itunes:image');
+            $coverImage->setAttribute('href', $this->image);
+
+            $element->appendChild($coverImage);
+        }
 
         return $element;
     }

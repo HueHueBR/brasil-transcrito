@@ -9,4 +9,6 @@ interface PostRepository
     public function latestPosts(int $amount): PostCollection;
 
     public function byCategory(string $category): PostCollection;
+
+    public function withAudio(): AudioEpisodeCollection;
 }

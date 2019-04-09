@@ -2,6 +2,7 @@
 
 namespace BrasilTranscrito\Infrastructure\Domain\Model\Post;
 
+use BrasilTranscrito\Domain\Model\Post\AudioEpisodeCollection;
 use BrasilTranscrito\Domain\Model\Post\Post;
 use BrasilTranscrito\Domain\Model\Post\PostCollection;
 use BrasilTranscrito\Domain\Model\Post\PostRepository;
@@ -16,6 +17,28 @@ class JigsawPostRepository implements PostRepository
     public function __construct(Jigsaw $jigsaw)
     {
         $this->jigsaw = $jigsaw;
+    }
+
+    private function jigsawCollectionToPostCollection(PageVariable $collection): PostCollection
+    {
+        return new PostCollection(
+            $collection
+                ->map(function (PageVariable $post) {
+                    return $post->makePostEntity();
+                })
+                ->toArray()
+        );
+    }
+
+    private function jigsawCollectionToAudioEpisodeCollection(PageVariable $collection): AudioEpisodeCollection
+    {
+        return new AudioEpisodeCollection(
+            $collection
+                ->map(function (PageVariable $post) {
+                    return $post->makeAudioEpisodeEntity();
+                })
+                ->toArray()
+        );
     }
 
     public function latestPost(): Post
@@ -42,14 +65,12 @@ class JigsawPostRepository implements PostRepository
         );
     }
 
-    private function jigsawCollectionToPostCollection(PageVariable $collection): PostCollection
+    public function withAudio(): AudioEpisodeCollection
     {
-        return new PostCollection(
-            $collection
-                ->map(function (PageVariable $post) {
-                    return $post->makePostEntity();
-                })
-                ->toArray()
+        return $this->jigsawCollectionToAudioEpisodeCollection(
+            $this->jigsaw
+                ->getCollection('posts')
+                ->whereNotIn('audio', [null])
         );
     }
 }

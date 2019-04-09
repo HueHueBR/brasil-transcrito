@@ -4,7 +4,7 @@ return [
     'title' => 'Brasil Transcrito',
     'subtitle' => 'Obras jornalísticas antigas transcritas e gravadas em áudio.',
     'description' => 'O projeto Brasil Transcrito é um esforço independente para transcrever obras jornalísticas e documentos de algumas décadas atrás, disponíveis em forma digital porém não indexáveis por mecanismos de busca por se encontrarem no formato "imagem".',
-    'lastBuildDate' => date('D, d M Y H:i:s O'),
+    'lastBuildDate' => date_create_immutable(),
     'language' => 'pt-BR',
     'author' => 'Brasil Transcrito',
     'explicit' => 'clean',
@@ -16,4 +16,5 @@ return [
     'imageUrl' => 'https://brasiltranscrito.huehue.eu/assets/images/icons/favicon-1400x1400.png',
     'feedUrl' => 'https://brasiltranscrito.huehue.eu/feed.xml',
     'url' => 'https://brasiltranscrito.huehue.eu',
+    'outputFilepath' => 'feed.xml',
 ];
